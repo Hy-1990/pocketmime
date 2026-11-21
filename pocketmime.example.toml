@@ -1,0 +1,3 @@
+[model]
+# Relative to pocketmime.toml, or use an absolute path.
+directory = "../models/tessera-small-onnx"

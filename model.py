@@ -5,6 +5,7 @@ import importlib.util
 import json
 import os
 import threading
+import tomllib
 from functools import lru_cache
 from pathlib import Path
 from urllib.request import urlopen
@@ -17,18 +18,26 @@ model_lock = threading.Lock()
 
 
 def model_folder():
-    return Path(
-        os.environ.get(
-            "POCKETMIME_MODEL_DIR", ROOT.parent / "models/tessera-small-onnx"
-        )
-    )
+    override = os.environ.get("POCKETMIME_MODEL_DIR")
+    if override:
+        return Path(override).expanduser()
+    config_path = ROOT / "pocketmime.toml"
+    if config_path.is_file():
+        with config_path.open("rb") as config:
+            directory = tomllib.load(config).get("model", {}).get("directory")
+        if directory is not None:
+            if not isinstance(directory, str) or not directory.strip():
+                raise ValueError(f"{config_path}: model.directory must be a non-empty path")
+            return ROOT / Path(directory).expanduser()
+    return ROOT.parent / "models/tessera-small-onnx"
 
 
 def available():
     from importlib.util import find_spec
 
     files = ("tessera_w8.onnx", "clip_text_w8.onnx", "tokenizer.json", "palette.json")
-    return all((model_folder() / f).is_file() for f in files) and all(
+    folder = model_folder()
+    return all((folder / f).is_file() for f in files) and all(
         find_spec(m) for m in ("numpy", "onnxruntime", "tokenizers", "huggingface_hub")
     )
 
