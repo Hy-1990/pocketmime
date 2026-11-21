@@ -4,9 +4,9 @@
 
 给一个角色配上几句口头禅，做一套能在聊天里用的循环动图。角色可以用自己的 JPG 或 PNG、内置青蛙，也可以用本机的 Tessera 模型生成。一个项目保存 **1～15 个动态表情**。
 
-[![在 X 观看 21 秒宣传片](docs/media/pocketmime-launch.gif)](https://x.com/AlexHu0110/status/2124161431700636004)
+[![动态宣传片：一只狐狸，最多 15 种表情](docs/media/pocketmime-launch.gif)](https://github.com/Hy-1990/pocketmime/releases/latest/download/pocketmime-x.mp4)
 
-[在 X 观看 21 秒宣传片](https://x.com/AlexHu0110/status/2124161431700636004) · [MP4](https://raw.githubusercontent.com/Hy-1990/pocketmime/main/docs/media/pocketmime-x.mp4)
+[下载 21 秒宣传片（MP4）](https://github.com/Hy-1990/pocketmime/releases/latest/download/pocketmime-x.mp4)
 
 <p>
   <img src="web/demo/on-it.gif" width="144" alt="On it">

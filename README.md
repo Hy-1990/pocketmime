@@ -4,9 +4,9 @@
 
 Make a pack of looping chat stickers from one character. Bring a JPG or PNG, use the PocketMime frog, or generate a pixel character locally with Tessera. Each project holds **1–15 animated stickers**.
 
-[![Watch the 21-second launch film on X](docs/media/pocketmime-launch.gif)](https://x.com/AlexHu0110/status/2124161431700636004)
+[![Animated launch film: one fox, up to 15 reactions](docs/media/pocketmime-launch.gif)](https://github.com/Hy-1990/pocketmime/releases/latest/download/pocketmime-x.mp4)
 
-[Watch the 21-second launch film on X](https://x.com/AlexHu0110/status/2124161431700636004) · [MP4](https://raw.githubusercontent.com/Hy-1990/pocketmime/main/docs/media/pocketmime-x.mp4)
+[Download the 21-second film (MP4)](https://github.com/Hy-1990/pocketmime/releases/latest/download/pocketmime-x.mp4)
 
 <p>
   <img src="web/demo/on-it.gif" width="144" alt="On it">

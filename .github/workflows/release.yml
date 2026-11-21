@@ -1,0 +1,24 @@
+name: Publish release
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Publish this main update and its film
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: v0.1.${{ github.run_number }}
+        run: |
+          set -euo pipefail
+          if ! gh release view "$TAG" >/dev/null 2>&1; then
+            gh release create "$TAG" --target "$GITHUB_SHA" --title "PocketMime $TAG" --generate-notes --draft
+          fi
+          gh release upload "$TAG" docs/media/pocketmime-x.mp4 --clobber
+          gh release edit "$TAG" --draft=false
