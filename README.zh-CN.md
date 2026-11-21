@@ -1,8 +1,12 @@
 # PocketMime
 
-[English](README.md) · [21 秒宣传短片](docs/media/pocketmime-x.mp4) · [观看操作演示（MP4）](docs/media/pocketmime-demo.mp4)
+[English](README.md)
 
 给一个角色配上几句口头禅，做一套能在聊天里用的循环动图。角色可以用自己的 JPG 或 PNG、内置青蛙，也可以用本机的 Tessera 模型生成。一个项目保存 **1～15 个动态表情**。
+
+[![在 X 观看 21 秒宣传片](docs/media/pocketmime-launch.gif)](https://x.com/AlexHu0110/status/2124161431700636004)
+
+[在 X 观看 21 秒宣传片](https://x.com/AlexHu0110/status/2124161431700636004) · [MP4](https://raw.githubusercontent.com/Hy-1990/pocketmime/main/docs/media/pocketmime-x.mp4)
 
 <p>
   <img src="web/demo/on-it.gif" width="144" alt="On it">
